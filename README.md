@@ -67,3 +67,12 @@ go mod tidy
 ```
 go test -v
 ```
+
+### Screenshots from local run
+1. Server
+
+    ![Screenshot 2024-08-08 at 6 51 51 AM](https://github.com/user-attachments/assets/005cd2a5-06b6-4eed-a45e-b57f5ab25192)
+
+2. cURL requests
+   
+    ![Screenshot 2024-08-08 at 6 51 40 AM](https://github.com/user-attachments/assets/0f236703-927e-43c2-864e-da91eb244d8f)
