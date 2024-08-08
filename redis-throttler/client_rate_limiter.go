@@ -93,7 +93,7 @@ ThrottleNonAtomic is a method that checks if a request should be throttled based
 It takes a context and a unique token as input, and returns a boolean indicating whether the request should be throttled(rate limited) or not.
 This is method does not provide atomicity and hence it is not used in the code path.
 Kept it here as it was my initial implementation prior to using the Lua script.
-Deprecated: FunctionName is deprecated.
+Deprecated: ThrottleNonAtomic is deprecated, do not use. 
 */
 func (r RateLimitThrottler) ThrottleNonAtomic(ctx context.Context, token string) bool {
 	key := r.getSlidingWindowKey(token)
