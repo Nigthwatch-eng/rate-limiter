@@ -53,6 +53,6 @@ func TestRateLimitHandler(t *testing.T) {
 	req, _ = http.NewRequest("GET", "/api/is_rate_limited/test_token", nil)
 	r.ServeHTTP(w, req)
 
-	assert.Equal(t, http.StatusOK, w.Code)
+	assert.Equal(t, http.StatusTooManyRequests, w.Code)
 	assert.Equal(t, "{\"rate_limited\":true}", w.Body.String())
 }

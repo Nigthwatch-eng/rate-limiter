@@ -46,8 +46,13 @@ func rateLimitHandler(c *gin.Context) {
 		return
 	}
 
+	code := http.StatusOK
 	rateLimited := rateLimiterClient.Throttle(ctx, uniqueToken)
-	c.JSON(http.StatusOK, gin.H{"rate_limited": rateLimited})
+	if rateLimited {
+		code = http.StatusTooManyRequests
+	}
+
+	c.JSON(code, gin.H{"rate_limited": rateLimited})
 }
 
 // updateRateLimiterConfig is a handler function for updating the rate limiter configuration

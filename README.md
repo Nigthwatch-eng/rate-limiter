@@ -49,7 +49,7 @@ go mod tidy
 
 ### Usage
 
-1. **Close Repository**:
+1. **Clone Repository**:
 2. **Start Redis**:
 3. Run the application
     ```
